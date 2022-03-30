@@ -14,10 +14,15 @@ html {
 
 /* adjust typography defaults */
 body {
+  text-align: center;
   margin: 2em;
   font-family: helvetica, arial, sans-serif;
   background-color: slategrey;
   color: white;
+}
+
+p {
+  font-size: 20pt;
 }
 
 /* images and videos max out at full width */
@@ -28,52 +33,102 @@ video {
 }
 
 h1 {
+  text-align: center;
   font-family: verdana, arial, sans-serif;
 }
 
-button {
+#startStopArea {
+  display: flex;
+  justify-content: center;
+}
+
+#startStopArea > button {
   padding: 10px;
   border-radius: 10px;
+  width: 1275px;
+  font-size: 25pt;
+  cursor: pointer;
 }
 
 .hidden {
   display: none;
 }
 
-#gameButtonArea > button {
-  width: 200px;
-  height: 200px;
-  margin: 2px;
+#gameButtonArea {
+  display: flex;
+  justify-content: center;
+  
+
 }
 
+#gameButtonArea > button {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/*This is for the starting sequence and player interaction*/
 #button1 {
-  background: lightgreen;
+  background: black;
+  cursor: crosshair;
 }
 
 #button1:active, #button1.lit {
-  background: green;
+   background-image: radial-gradient(red, black);
 }
 
 #button2 {
-  background: lightblue;
+  background: black;
+  cursor: crosshair;    /*makes game more immersive with different cursors*/
 }
 
 #button2:active, #button2.lit{
-  background: blue;
+  background-image: radial-gradient(lightgreen, black);
 }
 
 #button3 {
-  background: pink;
+  background: black;
+  cursor: crosshair;
 }
 
 #button3:active, #button3.lit {
-  background: red;
+  background-image: radial-gradient(darkturquoise, black);
 }
 
 #button4 {
-  background: lightyellow;
+  background: black;
+  cursor: crosshair;
 }
 
 #button4:active, #button4.lit {
-  background: yellow;
+  background-image: radial-gradient(yellow, black);
+}
+
+
+/*This is for the game clues*/
+#button1.green, #button2.green, #button3.green, #button4.green { 
+  background-image: radial-gradient(lightgreen, black);
+}
+
+#button1.red, #button2.red, #button3.red, #button4.red {
+  background-image: radial-gradient(red, black);
+}
+
+#button1.blue, #button2.blue, #button3.blue, #button4.blue {
+  background-image: radial-gradient(darkturquoise, black);
+}
+
+#button1.yellow, #button2.yellow, #button3.yellow, #button4.yellow {
+  background-image: radial-gradient(yellow, black);
+}
+
+/*This is for if the player wins or loses*/
+#button1.win, #button2.win, #button3.win, #button4.win {    /*if player loses turn all squares to green*/
+  background-image: radial-gradient(lightgreen, black);
+}
+
+#button1.lose, #button2.lose, #button3.lose, #button4.lose {    /*if player loses turn all squares to red*/
+  background-image: radial-gradient(red, black);
 }

@@ -16,16 +16,18 @@
   <body>
     <!-- this is the start of content -->
     <h1>Light and Sound Memory Game</h1>
-    <p>repeat the pattern back to win the game!</p>
-
-    <button id="startBtn" onclick="startGame()">Start</button>
-    <button id="stopBtn" class="hidden" onclick="stopGame()">Stop</button>
+    <p>Repeat the pattern back to win the game!</p>
 
     <div id="gameButtonArea">
-      <button id="button1" onclick="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone()"></button>
-      <button id="button2" onclick="guess(2)" onmousedown="startTone(2)" onmouseup="stopTone()"></button>
-      <button id="button3" onclick="guess(3)" onmousedown="startTone(3)" onmouseup="stopTone()"></button>
-      <button id="button4" onclick="guess(4)" onmousedown="startTone(4)" onmouseup="stopTone()"></button>
+      <button id="button1" onclick="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone()" class="none"></button>
+      <button id="button2" onclick="guess(2)" onmousedown="startTone(2)" onmouseup="stopTone()" class="none"></button>
+      <button id="button3" onclick="guess(3)" onmousedown="startTone(3)" onmouseup="stopTone()" class="none"></button>
+      <button id="button4" onclick="guess(4)" onmousedown="startTone(4)" onmouseup="stopTone()" class="none"></button>
+    </div>
+    
+    <div id="startStopArea">
+      <button id="startBtn" onclick="startGame()">Start</button>
+      <button id="stopBtn" class="hidden" onclick="stopGame()">Stop</button>
     </div>
   </body>
 </html>
