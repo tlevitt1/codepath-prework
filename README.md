@@ -4,7 +4,7 @@
 
 Submitted by: Thomas Levitt
 
-Time spent: About 10 hours spent in total
+Time spent: About 15 hours spent in total
 
 Link to project: https://glitch.com/edit/#!/levitt-light-sound-2
 
